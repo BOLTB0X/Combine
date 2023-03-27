@@ -15,7 +15,7 @@ Combine은 Publisher가 시간이 지남에 따라 변경될 수 있는 값을 �
 
 ## Combine의 기초 개념 in playGround
 
-- [Combine의 구조]()
+- [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
 - [TODO]()
 
@@ -26,4 +26,6 @@ Combine은 Publisher가 시간이 지남에 따라 변경될 수 있는 값을 �
 https://developer.apple.com/documentation/combine
 <br/>
 https://medium.com/harrythegreat/swift-combine-입문하기-가이드-1-525ccb94af57
+<br/>
+https://www.kodeco.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/1-hello-combine
 <br/>
