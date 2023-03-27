@@ -1,12 +1,11 @@
 ## Combine의 구조
 
-<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jLmJpJX952LXGsqpOKYQfQ.png" width="200" height="150"/>
-<br/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jLmJpJX952LXGsqpOKYQfQ.png" width="400" height="200"/>
 
 - Publisher, Operator, Subscriber로 구성
 - Subscriber로부터 데이터를 요청받으면 Publisher에서 데이터를 제공하고 중간에 Operator를 거쳐 Subscriber에게 전달
 
-<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uMKTUK7cK-gtNjdxEknWaQ.png" width="200" height="150"/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uMKTUK7cK-gtNjdxEknWaQ.png" width="400" height="200"/>
 <br/>
 
 Publisher와 Subscriber가 서로 데이터를 주고받을 때는 항상 두 가지의 타입이 존재
@@ -25,7 +24,7 @@ Publisher 입장에서는 Output 타입과 Failure 타입이 존재
 
 ## App의 구조와 Combine
 
-<img src="https://jryoun1.github.io/assets/images/Combine/Chapter1/5.png" width="200" height="150"/>
+<img src="https://jryoun1.github.io/assets/images/Combine/Chapter1/5.png" width="400" height="200"/>
 <br/>
 
 App에 새롭게 추가되는 부분에만 Combine을 사용할 수 있음, 즉 App의 구조에 따라서 영향을 끼치는 framework X
