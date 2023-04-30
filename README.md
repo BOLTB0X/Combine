@@ -7,7 +7,13 @@
 
 ## Overview
 
+Combine은 Reactive Programming에 기반을 둔 프레임워크로, 비동기 데이터 흐름을 다룸
+<br/>
+
 Combine 프레임워크는 시간 경과에 따라 값을 처리하기 위한 선언적 Swift API를 제공하고 이러한 값은 다양한 종류의 비동기 이벤트를 나타낼 수있음, 즉 시간의 흐름에 따라 발생하는 이벤트를 처리하기 위한 API라 생각하면 됌
+<br/>
+
+Combine은 Publisher와 Subscriber라는 두 가지 개념으로 구성
 <br/>
 
 Combine은 Publisher가 시간이 지남에 따라 변경될 수 있는 값을 노출하도록 선언하고 Subscriber는 게시자로부터 해당 값을 수신하도록 선언해서 사용한다는 뜻은 -> 요청자(Subscriber) 측에서 처리할 수 있다는 것
@@ -17,7 +23,7 @@ Combine은 Publisher가 시간이 지남에 따라 변경될 수 있는 값을 �
 
 - [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
-- [TODO]()
+- [Publisher와 Subscriber 예시]()
 
 ---
 
