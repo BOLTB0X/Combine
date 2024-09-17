@@ -8,15 +8,17 @@
 
 Publisher와 Subscriber라는 두 가지 개념으로 구성
 
-## Basic in playGround
+## Study
 
 - [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
 - [Publisher와 Subscriber 예시](https://github.com/BOLTB0X/Combine/tree/main/CombineBasic01)
 
-## Combine으로 JSON 받기
-
 - [CombineJSON](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
+
+- [Just]()
+
+- [Sink]()
 
 ## 참고
 
