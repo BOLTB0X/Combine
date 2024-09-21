@@ -14,9 +14,9 @@ Publisher와 Subscriber라는 두 가지 개념으로 구성
 
 - [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
-- [Publisher와 Subscriber 예시](https://github.com/BOLTB0X/Combine/tree/main/CombineBasic01)
+- [Publisher와 Subscriber 예시]()
 
-- [CombineJSON](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
+- [Combine JSON 활용](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
 
 - [Just](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Just.md)
 
