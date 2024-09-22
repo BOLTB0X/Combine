@@ -114,3 +114,7 @@ data.age = 30
 
 // change age? = ()
 // change age? = ()
+
+// MARK: - Cancellable
+
+cancellable!.cancel()

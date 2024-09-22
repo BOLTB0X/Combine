@@ -7,10 +7,13 @@ protocol Publisher<Output, Failure>
 ```
 
 - Combine 프레임워크의 핵심 프로토콜로, 데이터를 발행하는 객체
+  <br/>
 
 - 이벤트 스트림을 생성하고, Subscriber가 구독하면 이 스트림을 통해 data를 전달
+  <br/>
 
 - Publisher는 단순히 data를 방출하는 역할
+  <br/>
 
 ```swift
 //
@@ -25,6 +28,8 @@ publisher.sink {
 // print: 4
 ```
 
+<br/>
+
 # AnyPublisher
 
 > A publisher that performs type erasure by wrapping another publisher.
@@ -35,8 +40,10 @@ struct AnyPublisher<Output, Failure> where Failure : Error
 ```
 
 - **타입 지우기(Type Erasure)** 를 위한 구조체
+  <br/>
 
 - 어떤 Publisher든 다룰 수 있는 유연한 방법이 필요할 때 사용
+  <br/>
 
 ```swift
 let publishers = Just(10)
@@ -44,6 +51,8 @@ let publishers = Just(10)
     .eraseToAnyPublisher()
 // 타입이 AnyPublisher<Int, Never>로 변경 됌
 ```
+
+<br/>
 
 ## 참고
 

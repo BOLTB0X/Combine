@@ -7,8 +7,10 @@ var objectWillChange: Self.ObjectWillChangePublisher { get }
 ```
 
 - 인스턴스의 내부 @Published 값이 변경될때 objectWillChange 이벤트가 동작
+  <br/>
 
 - 값 형태는 ObservableObjectPublisher.Output 형태이지만 결과는 Void
+  <br/>
 
 ```swift
 class Contact2: ObservableObject {

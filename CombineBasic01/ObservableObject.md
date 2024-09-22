@@ -7,12 +7,17 @@ protocol ObservableObject : AnyObject
 ```
 
 ObservableObject를 채택한 클래스는 객체가 변할 때 이를 알리는 역할
+<br/>
 
 - ObservableObject를 채택한 인스턴스는 이벤트를 방출할 수 있는 인스턴스
+  <br/>
 
 - 이 인스턴스를 Subscriber가 구독하여 사용하는 것
+  <br/>
 
 > 기본적으로 ObservableObject는 @Published 프로퍼티가 변경되기 전에 변경된 값을 내보내는 objectWillChange publisher를 synthesizes
+
+<br/>
 
 ```swift
 class Contact: ObservableObject {
