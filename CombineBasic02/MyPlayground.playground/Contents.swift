@@ -1,5 +1,6 @@
 import UIKit
 import Combine
+import Foundation
 
 // MARK: - Future
 Future<Int, Never> { promise in
@@ -104,3 +105,29 @@ cancellable = emptyPublisher
             print("Received value: \(value)")
         }
     )
+
+// MARK: - Record
+let recordPublisher = Record<Int, Never> { record in
+    record.receive(0)
+    record.receive(1)
+    record.receive(2)
+    record.receive(3)
+    record.receive(completion: .finished)
+}
+
+cancellable = recordPublisher
+    .sink(
+        receiveCompletion: { completion in
+            print("Completion: \(completion)")
+        },
+        receiveValue: { value in
+            print("Received value: \(value)")
+        }
+    )
+
+//Received value: 0
+//Received value: 1
+//Received value: 2
+//Received value: 3
+//Completion: finished
+
