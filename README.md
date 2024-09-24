@@ -1,6 +1,6 @@
 # Combine
 
-![호호](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*S_xVVadtkIEItmp2Dxc93g.png)
+![호호](https://postfiles.pstatic.net/MjAyMjA2MTlfMTQw/MDAxNjU1NjI5ODk5NzYx.QYr_9AM2GGnj6xYt2u3Odta2RYP7c9kyJgb7WNlGhjwg.DMZdS08YtWGXyhzGEL0nLOSRJriidgm32J8fWSa_GQMg.GIF.gogoa25/IMG_3649.GIF?type=w3840)
 
 > Combine은 Reactive Programming에 기반을 둔 프레임워크로, 비동기 데이터 흐름을 다룸
 
@@ -8,19 +8,42 @@
 
 > Stream하나를 만들고 그 Stream에 필요한 operator를 덫붙여서 사용하는 선언적인 프로그래밍 방식
 
-Publisher와 Subscriber라는 두 가지 개념으로 구성
-
-## Study
+## Intro
 
 - [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
-- [Publisher와 Subscriber 예시]()
+## Basic
 
-- [Combine JSON 활용](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
+<!-- - [Publisher와 Subscriber 예시]() -->
 
-- [Just](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Just.md)
+- [Published](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)
 
-- [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
+- [ObservableObject
+  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/ObservableObject.md)
+
+- [objectWillChange
+  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/objectWillChange.md)
+
+- [Publisher](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Publisher.md)
+
+  - [Future](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Future.md)
+
+  - [Just](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Just.md)
+
+  - [Deferred](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Deferred.md)
+
+  - [Empty](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Empty.md)
+
+  - [Fail](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Fail.md)
+
+  - [Record]()
+
+- [Subscriber](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Subscriber.md)
+  - [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
+
+## Utilize
+
+- [JSON 활용](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
 
 ## 참고
 
