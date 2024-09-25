@@ -39,7 +39,8 @@
   - [Record]()
 
 - [Subscriber](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Subscriber.md)
-  - [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
+
+- [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
 
 ## Utilize
 
