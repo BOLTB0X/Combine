@@ -36,7 +36,7 @@
 
   - [Fail](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Fail.md)
 
-  - [Record]()
+  - [Record](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Record.md)
 
 - [Subscriber](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Subscriber.md)
 
