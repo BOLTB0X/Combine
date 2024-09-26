@@ -131,3 +131,79 @@ cancellable = recordPublisher
 //Received value: 3
 //Completion: finished
 
+// MARK: - sink
+var myRange = (0...3)
+cancellable = myRange.publisher
+    .sink(receiveCompletion: {
+        print ("completion: \($0)")
+    },
+          receiveValue: {
+        print ("value: \($0)")
+    })
+
+//  value: 0
+//  value: 1
+//  value: 2
+//  value: 3
+//  completion: finished
+
+let successPublisher = ["A", "B", "C", "D"].publisher
+
+cancellable = successPublisher.sink(
+    receiveCompletion: { completion in
+        switch completion {
+        case .finished:
+            print("completed 성공")
+        case .failure(let error):
+            print("fail error: \(error)")
+        }
+    },
+    receiveValue: { value in
+        print("Received value: \(value)")
+    }
+)
+
+//Received value: A
+//Received value: B
+//Received value: C
+//completed 성공.
+
+enum Errorr: Error {
+    case Common
+    case Very
+    case Unbelievable
+}
+
+let failingPublisher = Fail<String, Errorr>(error: .Unbelievable)
+
+cancellable = failingPublisher.sink(
+    receiveCompletion: { completion in
+        switch completion {
+        case .finished:
+            print("completed 성공")
+        case .failure(let error):
+            print("fail error: \(error)")
+        }
+    },
+    receiveValue: { value in
+        print("Received value: \(value)")
+    }
+)
+
+// fail error: Unbelievable
+
+// MARK: - assign
+class MyClass {
+    var anInt: Int = 0 {
+        didSet {
+            print("anInt was set to: \(anInt)", terminator: "; ")
+        }
+    }
+}
+
+
+var myObject = MyClass()
+myRange = (0...3)
+cancellable = myRange.publisher
+    .assign(to: \.anInt, on: myObject)
+// anInt was set to: 0; anInt was set to: 1; anInt was set to: 2; anInt was set to: 3; 
