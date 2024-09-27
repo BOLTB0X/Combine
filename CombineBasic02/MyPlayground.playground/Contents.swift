@@ -206,4 +206,44 @@ var myObject = MyClass()
 myRange = (0...3)
 cancellable = myRange.publisher
     .assign(to: \.anInt, on: myObject)
-// anInt was set to: 0; anInt was set to: 1; anInt was set to: 2; anInt was set to: 3; 
+// anInt was set to: 0; anInt was set to: 1; anInt was set to: 2; anInt was set to: 3;
+
+class MyModel: ObservableObject {
+    @Published var lastUpdated: Date = Date()
+    
+    init() {
+        Timer.publish(every: 1.0, on: .main, in: .common)
+            .autoconnect()
+            .assign(to: &$lastUpdated)  // lastUpdated에 값을 지속적으로 할당
+    }
+}
+
+// MyModel 인스턴스 생성
+let myModel = MyModel()
+
+// 구독 설정
+cancellable = myModel.$lastUpdated.sink { date in
+    print("lastUpdated가 변경: \(date)")
+}
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+    cancellable.cancel()  // 구독을 취소하여 메모리 관리를 해줍니다.
+    print("구독 취소")
+}
+
+//lastUpdated가 변경: 2024-09-26 11:46:45 +0000
+//lastUpdated가 변경: 2024-09-26 11:46:46 +0000
+//lastUpdated가 변경: 2024-09-26 11:46:47 +0000
+//lastUpdated가 변경: 2024-09-26 11:46:48 +0000
+//lastUpdated가 변경: 2024-09-26 11:46:49 +0000
+//lastUpdated가 변경: 2024-09-26 11:46:50 +0000
+//구독이 취소
+
+class MyModel2: ObservableObject {
+    @Published var id: Int = 0 
+}
+
+let model2 = MyModel2()
+
+Just(100)
+    .assign(to: &model2.$id) // id에 100 할당
