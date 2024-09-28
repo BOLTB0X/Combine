@@ -6,7 +6,13 @@
 protocol Publisher<Output, Failure>
 ```
 
-- Combine 프레임워크의 핵심 프로토콜로, 데이터를 발행하는 객체
+- Generic type parameters
+
+  1.  **Output**: Publisher가 방출하는 값의 타입
+  2.  **Failure**: Publisher가 방출할 수 있는 에러의 종류
+      <br/>
+
+- Combine 프레임워크의 핵심 프로토콜로, data를 발행하는 객체
   <br/>
 
 - 이벤트 스트림을 생성하고, Subscriber가 구독하면 이 스트림을 통해 data를 전달
@@ -28,36 +34,10 @@ publisher.sink {
 // print: 4
 ```
 
-<br/>
-
-# AnyPublisher
-
-> A publisher that performs type erasure by wrapping another publisher.
-
-```swift
-@frozen
-struct AnyPublisher<Output, Failure> where Failure : Error
-```
-
-- **타입 지우기(Type Erasure)** 를 위한 구조체
-  <br/>
-
-- 어떤 Publisher든 다룰 수 있는 유연한 방법이 필요할 때 사용
-  <br/>
-
-```swift
-let publishers = Just(10)
-    .map { $0 * 2 }
-    .eraseToAnyPublisher()
-// 타입이 AnyPublisher<Int, Never>로 변경 됌
-```
-
-<br/>
-
 ## 참고
 
 - [공식문서 - publisher](https://developer.apple.com/documentation/combine/publisher)
 
-- [공식문서 - anypublisher](https://developer.apple.com/documentation/combine/anypublisher)
+- [블로그 참고 - 1](https://ios-development.tistory.com/1117)
 
-- [블로그 참고](https://ios-development.tistory.com/1117)
+- [블로그 참고 - 2](https://sujinnaljin.medium.com/combine-subscriber-409023bc6d89)

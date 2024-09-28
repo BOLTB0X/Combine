@@ -6,10 +6,22 @@
 protocol Subscriber<Input, Failure> : CustomCombineIdentifierConvertible
 ```
 
+- Generic type parameters
+
+  1.  **Input**: Subscriber가 받는 값의 타입
+  2.  **Failure**: Subscriber 받을 수 있는 error의 종류
+      <br/>
+
 - Subscriber는 Publisher와 함께 동작하여 이벤트 스트림에서 발생하는 data나 eroor를 받아 처리
   <br/>
 
-- Subscriber가 구독을 시작하면, Publisher는 data를 발행하고, Subscriber는 그 data를 받아 특정 task을 수행하거나 eror를 처리
+- Subscriber가 구독을 시작하면, Publisher는 data를 발행하고, Subscriber는 그 data를 받아 특정 작업을 수행하거나 eror를 처리
+  <br/>
+
+- susbcriber와 publisher을 연결하기 위해**subscribe(\_:)** 호출, 취소할 경우 **cancel()**
+  <br/>
+
+- [receive]()는 Subscriber 프로토콜을 구현할 때 사용하는 메서드
   <br/>
 
 ```swift

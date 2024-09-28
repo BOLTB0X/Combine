@@ -42,6 +42,8 @@
 
 - [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
 
+- [Assign](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/assign.md)
+
 ## Utilize
 
 - [JSON 활용](https://github.com/BOLTB0X/Combine/tree/main/CombineJSON)
