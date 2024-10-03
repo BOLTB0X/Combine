@@ -18,10 +18,10 @@ protocol Subscriber<Input, Failure> : CustomCombineIdentifierConvertible
 - Subscriber가 구독을 시작하면, Publisher는 data를 발행하고, Subscriber는 그 data를 받아 특정 작업을 수행하거나 eror를 처리
   <br/>
 
-- susbcriber와 publisher을 연결하기 위해**subscribe(\_:)** 호출, 취소할 경우 **cancel()**
+- susbcriber와 publisher을 연결하기 위해**subscribe( \_ : )** 호출, 취소할 경우 **cancel()**
   <br/>
 
-- [receive]()는 Subscriber 프로토콜을 구현할 때 사용하는 메서드
+- [receive](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/receive.md)는 Subscriber 프로토콜을 구현할 때 사용하는 메서드
   <br/>
 
 ```swift

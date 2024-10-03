@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 import Combine
 
 // MARK: - publisher
@@ -118,3 +118,29 @@ data.age = 30
 // MARK: - Cancellable
 
 cancellable!.cancel()
+
+// MARK: - AnySubscriber
+
+let anySubscriber = AnySubscriber<Int, Never>(
+    receiveSubscription: { subscription in
+        print("구독!")
+        subscription.request(.unlimited)
+    },
+    receiveValue: { value in
+        print("Received value: \(value)")
+        return .none
+    },
+    receiveCompletion: { completion in
+        print("\(completion)")
+    }
+)
+
+//구독!
+//Received value: 0
+//Received value: 1
+//Received value: 2
+//Received value: 3
+//Received value: 4
+//finished
+publisher
+    .subscribe(anySubscriber)

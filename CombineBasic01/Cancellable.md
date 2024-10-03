@@ -44,8 +44,7 @@ final class AnyCancellable
   <br/>
 
 - AnyCancellable은 이를 실제로 구현한 타입으로, 주로 Combine에서 구독을 취소할 때 사용
-
-<br/>
+  <br/>
 
 - **구독 관리**
   AnyCancellable을 통해 구독이 자동으로 관리되며, 더 이상 필요하지 않을 때 구독을 취소 가능

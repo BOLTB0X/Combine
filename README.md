@@ -8,23 +8,19 @@
 
 > Stream하나를 만들고 그 Stream에 필요한 operator를 덫붙여서 사용하는 선언적인 프로그래밍 방식
 
+- Publisher: 값 방출
+
+- Subscriber: 값을 받는 대상
+
+- AnyCancellable: 구독을 유지하는 객체
+
 ## Intro
 
-- [Combine의 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
+- [Combine 구조](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/concept1.md)
 
 ## Basic
 
-<!-- - [Publisher와 Subscriber 예시]() -->
-
-- [Published](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)
-
-- [ObservableObject
-  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/ObservableObject.md)
-
-- [objectWillChange
-  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/objectWillChange.md)
-
-- [Publisher](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Publisher.md)
+- [Publisher](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Publisher.md) & [AnyPublisher](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/AnyPublisher.md)
 
   - [Future](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Future.md)
 
@@ -37,12 +33,33 @@
   - [Fail](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Fail.md)
 
   - [Record](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic02/Record.md)
+    <br/>
 
-- [Subscriber](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Subscriber.md)
+- [Subscriber](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Subscriber.md) & [AnySubscriber]()
+
+  - [Receive](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/receive.md)
+    <br/>
+
+- [Cancellable & AnyCancellable](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Cancellable.md)
 
 - [Sink](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/Sink.md)
 
 - [Assign](https://github.com/BOLTB0X/Combine/blob/main/CombineConcept/assign.md)
+
+## For Model
+
+- [Subject]()
+
+  - [PassthroughSubject]()
+  - [CurrentValueSubject]()
+    <br/>
+
+- [Published](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)
+
+- [ObservableObject
+  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/ObservableObject.md)
+  - [objectWillChange
+    ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/objectWillChange.md)
 
 ## Utilize
 
@@ -52,8 +69,10 @@
 
 - [공식문서](https://developer.apple.com/documentation/combine)
 
-- [블로그 참조 - 1](https://medium.com/harrythegreat/swift-combine-입문하기-가이드-1-525ccb94af57)
+- [블로그 참조 - harrythegreat](https://medium.com/harrythegreat/swift-combine-입문하기-가이드-1-525ccb94af57)
 
-- [블로그 참조 - 2](https://ios-development.tistory.com/1112)
+- [블로그 참조 - ios 김종권](https://ios-development.tistory.com/1112)
+
+- [블로그 참조 - 개발자 소들이](https://babbab2.tistory.com/)
 
 - [kodeco 참조](https://www.kodeco.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/1-hello-combine)
