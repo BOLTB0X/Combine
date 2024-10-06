@@ -1,4 +1,4 @@
-## CurrentValueSubject
+# CurrentValueSubject
 
 > A subject that wraps a single value and publishes a new element whenever the value changes.
 

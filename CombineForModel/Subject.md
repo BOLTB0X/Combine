@@ -1,6 +1,6 @@
-## Subject
+# Subject
 
-Combine에서 모델과 데이터를 위한 publisher 만드는 방법은 [@Publisehd](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)와 [PassthroughSubject](), [CurrentValueSubject]()
+Combine에서 모델과 데이터를 위한 publisher 만드는 방법은 [@Publisehd](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)와 [PassthroughSubject](https://github.com/BOLTB0X/Combine/blob/main/CombineForModel/PassthroughSubject.md), [CurrentValueSubject](https://github.com/BOLTB0X/Combine/blob/main/CombineForModel/CurrentValueSubject.md)
 <br/>
 
 > A publisher that exposes a method for outside callers to publish elements.
