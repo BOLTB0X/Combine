@@ -8,11 +8,11 @@
 
 > Stream하나를 만들고 그 Stream에 필요한 operator를 덫붙여서 사용하는 선언적인 프로그래밍 방식
 
-- Publisher: 값 방출
+- **Publisher** : 값 방출
 
-- Subscriber: 값을 받는 대상
+- **Subscriber** : 값을 받는 대상
 
-- AnyCancellable: 구독을 유지하는 객체
+- **AnyCancellable** : 구독을 유지하는 객체
 
 ## Intro
 
@@ -56,10 +56,8 @@
 
 - [Published](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/Published.md)
 
-- [ObservableObject
-  ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/ObservableObject.md)
-  - [objectWillChange
-    ](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/objectWillChange.md)
+- [ObservableObject](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/ObservableObject.md)
+  - [objectWillChange](https://github.com/BOLTB0X/Combine/blob/main/CombineBasic01/objectWillChange.md)
 
 ## Utilize
 

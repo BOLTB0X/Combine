@@ -1,10 +1,14 @@
 # receive
 
-- Receiving Elements: **receive(\_ : )**, **receive()**
+- Receiving Elements
 
-- Receiving Life Cycle Events: **eceive(subscription: )**, **receive(completion: )**
+  `receive(\_ : )` , `receive()`
 
-## receive(\_ : )
+- Receiving Life Cycle Events
+
+  `receive(subscription: )` , `receive(completion: )`
+
+## `receive(\_ : )`
 
 > Tells the subscriber that the publisher has produced an element.
 
@@ -12,9 +16,10 @@
 func receive(_ input: Self.Input) -> Subscribers.Demand
 ```
 
-- Publisher로부터 새로운 값을 받을 때 호출
-  <br/>
-- 예시
+- *Publisher* 로부터 새로운 값을 받을 때 호출
+  
+- ex
+
   ```swift
   func receive(_ input: Int) -> Subscribers.Demand {
        print("Received value: \(input)")
@@ -22,7 +27,7 @@ func receive(_ input: Self.Input) -> Subscribers.Demand
   }
   ```
 
-## receive()
+## `receive()`
 
 > Tells the subscriber that a publisher of void elements is ready to receive further requests.
 
@@ -30,9 +35,9 @@ func receive(_ input: Self.Input) -> Subscribers.Demand
 func receive() -> Subscribers.Demand
 ```
 
-- Void 형 publisher가 추가 요청을 받을 준비가 되었음을 subscriber에게 알리는 용도의 메서드
+- Void 형 *publisher* 가 추가 요청을 받을 준비가 되었음을 *subscriber* 에게 알리는 용도의 메서드
 
-## receive(subscription:)
+## `receive(subscription:)`
 
 > Tells the subscriber that it has successfully subscribed to the publisher and may request items.
 
@@ -41,9 +46,9 @@ func receive(subscription: any Subscription)
 ```
 
 - 구독이 시작되었을 때 호출되는 메서드
-  <br/>
 
-- 예시
+- ex
+
   ```swift
   func receive(subscription: Subscription) {
     print("구독 start")
@@ -51,7 +56,7 @@ func receive(subscription: any Subscription)
   }
   ```
 
-## receive(completion: )
+## `receive(completion: )`
 
 > Tells the subscriber that the publisher has completed publishing, either normally or with an error.
 
@@ -59,16 +64,18 @@ func receive(subscription: any Subscription)
 func receive(completion: Subscribers.Completion<Self.Failure>)
 ```
 
-- completion: Subscribers.Completion은 Success 또는 Failure의 결과를 나타내는 열거형
+- **completion**
 
-  - .finished: Publisher가 정상적으로 완료된 경우.
-  - .failure(Error): Publisher가 오류와 함께 종료된 경우.
-    <br/>
+   `Subscribers.Completion` 은 Success 또는 Failure의 결과를 나타내는 열거형
 
-- Publisher가 완료 이벤트(성공 또는 실패)를 보낼 때 호출하는 메서드
-  <br/>
+  - `.finished` : *Publisher* 가 정상적으로 완료된 경우
 
-- 예시
+  - `.failure(Error)` : *Publisher* 가 오류와 함께 종료된 경우
+
+- *Publisher* 가 완료 이벤트(성공 또는 실패)를 보낼 때 호출하는 메서드
+
+- ex
+
   ```swift
   func receive(completion: Subscribers.Completion<Never>) {
     print("구독 completion: \(completion)")

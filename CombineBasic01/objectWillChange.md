@@ -6,11 +6,11 @@
 var objectWillChange: Self.ObjectWillChangePublisher { get }
 ```
 
-- 인스턴스의 내부 @Published 값이 변경될때 objectWillChange 이벤트가 동작
-  <br/>
+- 인스턴스의 내부 `@Published` 값이 변경될때 `objectWillChange` 이벤트가 동작
 
-- 값 형태는 ObservableObjectPublisher.Output 형태이지만 결과는 Void
-  <br/>
+- 값 형태는 `ObservableObjectPublisher.Output` 형태이지만 결과는 Void
+
+## ex
 
 ```swift
 class Contact2: ObservableObject {
@@ -25,7 +25,9 @@ class Contact2: ObservableObject {
         self.age = age
     }
 }
+```
 
+```swift
 var data = Contact2(age: 20)
 data.objectWillChange
     .send()

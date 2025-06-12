@@ -7,17 +7,17 @@
 struct AnyPublisher<Output, Failure> where Failure : Error
 ```
 
-- Generic type parameters
+- **Generic type parameters**
 
-  1.  **Output**: Publisher가 방출하는 값의 타입
-  2.  **Failure**: Publisher가 방출할 수 있는 에러의 종류
-      <br/>
+  1.  **Output**: *Publisher* 가 방출하는 값의 타입
+
+  2.  **Failure**: *Publisher* 가 방출할 수 있는 에러의 종류
+  
+  ---
 
 - **타입 지우기(Type Erasure)** 를 위한 구조체
-  <br/>
 
-- 어떤 Publisher든 다룰 수 있는 유연한 방법이 필요할 때 사용
-  <br/>
+- 어떤 *Publisher* 든 다룰 수 있는 유연한 방법이 필요할 때 사용
 
 ```swift
 let publishers = Just(10)
@@ -26,7 +26,6 @@ let publishers = Just(10)
 // 타입이 AnyPublisher<Int, Never>로 변경 됌
 ```
 
-<br/>
 
 ## 참고
 
